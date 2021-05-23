@@ -27,3 +27,5 @@ I has developing a secured authentication and Authorization system using jwt . i
 <li> 7. cors</li>
 <li> 8. bcrypt </li>
 <li> 9. path </li>
+<li> 10. helmet</li>
+<li> 11. http-errors</li>
