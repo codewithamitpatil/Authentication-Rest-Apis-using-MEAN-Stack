@@ -18,4 +18,12 @@ I has developing a secured authentication and Authorization system using jwt . i
 
 <h2> Node Modules Used In this Project</h2>
 
-
+<li> 1. express</li>
+<li> 2. body-parser </li>
+<li> 3. multer</li>
+<li> 4. morgan</li>
+<li> 5. express-validator</li>
+<li> 6. @hapi/joi</li>
+<li> 7. cors</li>
+<li> 8. bcrypt </li>
+<li> 9. path </li>
