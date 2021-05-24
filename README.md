@@ -29,3 +29,5 @@ I has developing a secured authentication and Authorization system using jwt . i
 <li> 9. path </li>
 <li> 10. helmet</li>
 <li> 11. http-errors</li>
+<li> 12. jsonwebtoken</li>
+<li> 13. redis</li>
