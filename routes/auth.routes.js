@@ -7,7 +7,7 @@ const { body }        = require('express-validator');
 
 // includes
    const AuthController  = require('../controllers/auth.controller'); 
-
+   const UserAuthGard    = require('../helpers/jwt.helpers');
 // intilize multer
    const upload = multer();
 
@@ -35,7 +35,9 @@ const { body }        = require('express-validator');
 // create refresh token 
    router.post('/user-refresh-token',asyncHandler(AuthController.refresh_token)); 
 
-
+// change password
+   router.post('/user-change-password',UserAuthGard.VerifyAccessToken,asyncHandler(AuthController.change_password)); 
+   
 
 // export routes
    module.exports = router;

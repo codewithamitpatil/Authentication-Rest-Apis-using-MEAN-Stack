@@ -17,12 +17,28 @@ const Login = joi.object({
 
 });
 
+const Refresh_Token = joi.object({
+    
+        RefreshToken : joi.string().required()
+
+});
+
+
+
+const Change_Password = joi.object({
+    
+        OldPassword:joi.string().required(),
+        NewPassword:joi.string().min(8).max(16).required()
+
+});
 
 // export modules
    module.exports =
    {   
        Signup,
-       Login
+       Login,
+       Refresh_Token,
+       Change_Password
    }
 
 
