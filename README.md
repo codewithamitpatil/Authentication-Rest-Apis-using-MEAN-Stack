@@ -9,7 +9,8 @@ I have developed a secured authentication and Authorization system using jwt . i
 ## Features
 
 
-> Authentication with JWT 
+> User
+ -Authentication with JWT 
   - Login (User/Admin)
   - Register
   - Logout
