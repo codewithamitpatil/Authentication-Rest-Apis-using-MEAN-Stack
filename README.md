@@ -9,13 +9,22 @@ I have developed a secured authentication and Authorization system using jwt . i
 ## Features
 
 
+> Admin 
+
+- Authentication with JWT 
+  - Login 
+  - Logout
+  - Reset Password
+
+
 > User
- -Authentication with JWT 
-  - Login (User/Admin)
+
+- Authentication with JWT 
+  - Login 
   - Register
   - Logout
   - Reset Password
-  
+  - Delete Account
 
 
 <h2> Node Modules Used In this Project</h2>
