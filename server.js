@@ -6,7 +6,7 @@ const HttpErrors  = require('http-errors');
 const path        = require('path');
 const multer      = require('multer');
 const morgan      = require('morgan');
-
+const helmet           = require('helmet');
 
 // env file
 require('dotenv').config();
@@ -37,6 +37,9 @@ const upload = multer();
 
 //  cors mechanism
     app.use('*',cors());
+
+//  helmet for protecting xss attack    
+    app.use(helmet());    
 
 //  json parsing
     app.use(bodyParser.json());

@@ -3,8 +3,8 @@
    const bcrypt      = require('bcrypt');
    const httpErrors  = require('http-errors');
 
-// User Schema
-   const UserSchema = mongoose.Schema({
+// Admin Schema
+   const AdminSchema = mongoose.Schema({
 
     username :  {
                 type:String,
@@ -24,7 +24,7 @@
    });
 
 // for password hashing
-   UserSchema.pre('save',async function(next){
+   AdminSchema.pre('save',async function(next){
   
   const salt      = await bcrypt.genSalt(10);
   const hashpass  = await bcrypt.hash(this.password,salt);
@@ -34,7 +34,7 @@
    });
 
 // Authentication Check Middleware (Authcheck)
-   UserSchema.statics.Authentication = async function(data) {
+AdminSchema.statics.Authentication = async function(data) {
     
      const { username , password } = data;
      
@@ -64,7 +64,7 @@
    }
 
 // Old Passwrd Check 
-   UserSchema.statics.OldPassWordCheck = async function(data) {
+AdminSchema.statics.OldPassWordCheck = async function(data) {
     
 
     console.log(data);
@@ -88,8 +88,8 @@
 
    }
 
-// User Model (Collection)
-   const User = mongoose.model('User',UserSchema);
+// Admin Model (Collection)
+   const Admin = mongoose.model('admin', AdminSchema);
 
 // Export Module
-   module.exports = User;
+   module.exports =Admin;
