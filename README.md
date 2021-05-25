@@ -7,35 +7,75 @@ I have developed a secured authentication and Authorization system using jwt . i
 
 <h2>Features</h2>
 <ul>
-<li> 1. User can Sign Up</li>
-<li> 2. User can Log In </li>
-<li> 3. User can Log Out </li>
-<li> 4. User can change password </li>
-<li> 5. User can genrate Refresh and Access Token </li>
+  <li> 1. User can Sign Up</li>
+  <li> 2. User can Log In </li>
+  <li> 3. User can Log Out </li>
+  <li> 4. User can change password </li>
+  <li> 5. User can genrate Refresh and Access Token </li>
 </ul>
 
 <h2> Node Modules Used In this Project</h2>
 
-<li> 1.  express</li>
-<li> 2.  body-parser </li>
-<li> 3.  multer</li>
-<li> 4.  morgan</li>
-<li> 5.  mongoose</li>
-<li> 6.  @hapi/joi</li>
-<li> 7.  cors</li>
-<li> 8.  bcrypt </li>
-<li> 9.  path </li>
-<li> 10. helmet</li>
-<li> 11. http-errors</li>
-<li> 12. jsonwebtoken</li>
-<li> 13. redis</li>
-<li> 14. jsonwebtoken</li>
-<li> 15. dotenv </li>
-<li> 16. gitignore </li>
- 
+
+<table style="width:100%">
+
+  <tr>
+    <td>1</td>
+    <td>express</td>
    
-
-
+  </tr>
+  <tr>
+    <td>2</td>
+    <td> body-parser </td>
+  </tr>
+ <tr>
+    <td>3</td>
+    <td> jsonwebtoken </td>
+  </tr>
+ <tr>
+    <td>4</td>
+    <td> multer </td>
+  </tr><tr>
+    <td>5</td>
+    <td> morgan</td>
+  </tr><tr>
+    <td>6</td>
+    <td> mongoose </td>
+  </tr><tr>
+    <td>7</td>
+    <td> @hapi/joi </td>
+  </tr><tr>
+    <td>8</td>
+    <td> path </td>
+  </tr><tr>
+    <td>9</td>
+    <td> cors </td>
+  </tr><tr>
+    <td>10</td>
+    <td> bcrypt </td>
+  </tr><tr>
+    <td>11</td>
+    <td> helmet </td>
+  </tr><tr>
+    <td>12</td>
+    <td> radis </td>
+  </tr><tr>
+    <td>13</td>
+    <td> http-errors </td>
+  </tr><tr>
+    <td>14</td>
+    <td> dotenv </td>
+  </tr><tr>
+    <td>15</td>
+    <td> gitignore </td>
+  </tr>
+ <tr>
+    <td>16</td>
+    <td> express-validator </td>
+  </tr>
+ 
+ 
+</table>
 
 
 
