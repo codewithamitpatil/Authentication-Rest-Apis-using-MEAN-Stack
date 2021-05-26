@@ -6,7 +6,7 @@ const HttpErrors  = require('http-errors');
 const path        = require('path');
 const multer      = require('multer');
 const morgan      = require('morgan');
-const helmet           = require('helmet');
+const helmet      = require('helmet');
 
 // env file
 require('dotenv').config();
@@ -17,6 +17,7 @@ const errorHandler = require('./error/errorHandler');
 const mongodb      = require('./config/init_mongodb');
 const AuthGard     = require('./helpers/jwt.helpers');
 const asyncHandler = require('./middlewares/async.middleware');
+const rateLimit    = require('./middlewares/ratelimiter.middleware');
 
 // require routes 
 const authRoutes = require('./routes/auth.routes');
@@ -30,7 +31,8 @@ const app = express();
 
 const upload = multer();
 
-
+//  ratelimit to block ip
+    app.use(rateLimit);
 
 //  request  log (morgan)
     app.use(morgan('dev'));
