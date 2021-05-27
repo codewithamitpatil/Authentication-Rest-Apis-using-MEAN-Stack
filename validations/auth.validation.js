@@ -27,9 +27,28 @@ const Refresh_Token = joi.object({
 
 const Change_Password = joi.object({
     
-        OldPassword:joi.string().required(),
-        NewPassword:joi.string().min(8).max(16).required()
+        OldPassword : joi.string().required(),
+        NewPassword : joi.string().min(8).max(16).required()
 
+});
+
+const NewPass = joi.object({
+        
+        newpass: joi.string().min(8).max(16).required()
+
+});
+
+const ForgotPass = joi.object({
+
+        email : joi.string().email().required().lowercase()
+      
+});
+
+const VerifyOtp = joi.object({
+
+        email : joi.string().email().optional().lowercase(),
+        otp:joi.number().required()
+      
 });
 
 // export modules
@@ -38,7 +57,10 @@ const Change_Password = joi.object({
        Signup,
        Login,
        Refresh_Token,
-       Change_Password
+       Change_Password,
+       ForgotPass,
+       NewPass,
+       VerifyOtp
    }
 
 

@@ -43,7 +43,27 @@
 // refresh token 
    router.post('/refresh-token',asyncHandler(AuthController.Refresh_Token)); 
 
+// forgot-password (User)
+   router.post('/user-forgot-password',asyncHandler(AuthController.User_Forgot_Password)); 
+  
+ 
+// forgot-password (Admin)
+   router.post('/admin-forgot-password',asyncHandler(AuthController.Admin_Forgot_Password)); 
+    
+// Admin (New Password)
+   router.post('/admin-new-password',UserAuthGard.VerifyAccessToken,asyncHandler(AuthController.Admin_New_Password)); 
 
+
+// User (New Password)
+   router.post('/user-new-password',UserAuthGard.VerifyAccessToken,asyncHandler(AuthController.User_New_Password)); 
+
+
+// Admin Verify Otp
+   router.post('/admin-verify-otp',asyncHandler(AuthController.Admin_Verify_Otp)); 
+  
+// Verify Otp
+   router.post('/user-verify-otp',asyncHandler(AuthController.User_Verify_Otp)); 
+  
 // export routes
    module.exports = router;
 
