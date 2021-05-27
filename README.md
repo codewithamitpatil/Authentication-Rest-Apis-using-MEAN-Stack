@@ -2,7 +2,7 @@ Currently Working on this project
 
 
 # Highly Secured Authentication System With User Profile Page
-I have developed a secured authentication and Authorization system using jwt . in this system I had generated two tokens first one is an access token which has a short period of time of approximately 1 hour and another one is a refreshing token which has 1 year of the expiry date. basically, what I do here, at the time of user signup or login I generate this to tokens and send back to the client, and then later on each request I send one additional header called authorization and in that header, I pass this access token so then I can verify the token and extract the userid from it.
+I have developed a secured authentication and Authorization system using jwt . in this system I had generated two tokens first one is an access token which has a short period of approximately 1 hour and another one is a refreshing token that has 1 year of the expiry date. basically, what I do here, on the time of user signup or login I generate this to tokens and send back to the client and then later on each request I send one additional header called authorization and in that header, I pass this access token so then I can verify the token and extract the userid from it.
 
 
 
