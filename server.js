@@ -86,9 +86,9 @@ const upload = multer();
 // Handle unhandled promise rejections
    process.on('unhandledRejection', (err, promise) => {
         
-        console.log(`Error: ${err.message}`);
+        console.log(`unhandledRejection Error: ${err.message}`);
         // Close server & exit process
-        server.close(() => process.exit(1));
+       // server.close(() => process.exit(1));
 
    });
 
