@@ -58,7 +58,7 @@ AdminSchema.statics.Authentication = async function(data) {
          return; 
     }
      
-    return user.id;
+    return user;
 
    
    }

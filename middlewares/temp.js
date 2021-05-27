@@ -7,23 +7,22 @@ module.exports =
 
 SendMail:async function (mail_to,otp) {
   
+  
+
     const template = await otptem.OtpFormat(otp);
   
     const transport = nodemailer.createTransport({
-       
-        service: "gmail",
+        host: "smtp.mailtrap.io",
+        port: 2525,
         auth: {
-            user: process.env.Email,
-            pass: process.env.Epass
-        },
-        tls: {
-            rejectUnauthorized: false
-          }
+            user: "04f7055cf6f158",
+            pass: "7f9459a7f99ce2"
+        }
         });
   
     
     transport.sendMail({
-        from: 'amitwebdev2019@gmail.com',
+        from: 'elenor.bins@ethereal.email',
         to: mail_to,
         subject:'Otp Verification',
         html: template
@@ -31,6 +30,9 @@ SendMail:async function (mail_to,otp) {
   
     
     return  'ok';
+
+
+
 
 
 }

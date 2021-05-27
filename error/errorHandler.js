@@ -16,7 +16,12 @@ module.exports =
     {
          err.status = 400;
     }
- 
+   
+    if(err.message =='ERROR is not defined')
+    {
+        err.status = 500;
+        err.message = 'Internal Server Error .Plz Try Later'
+    }
     console.log({ 
                   "error_name" : err.name ,
                   "error_status" : err.status,

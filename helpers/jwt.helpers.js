@@ -1,24 +1,29 @@
 
-const jwt          = require('jsonwebtoken');
-const httpErrors   = require('http-errors');
-const redisClient  = require('../config/init_redis');
+const jwt           = require('jsonwebtoken');
+const httpErrors    = require('http-errors');
+const redisClient   = require('../config/init_redis');
 
 // jwt middlewares
 module.exports =
 {
 //  genrate access token
-    SignAccessToken  : async function(uid) {
+    SignAccessToken  : async function(data) {
         
+        const { _id ,email ,username } = data;
+        const uid = _id.toString();
+        const mail = email;
+        const  uname = username;
+
         return new Promise((resolve,reject)=>{
         
-        const payload =  { name:'amit patil' } ;
+        const payload = { username:uname ,email:mail } ;
 
-        const key     =  process.env.PRIVATE_ACCESS_KEY ;
+        const key     = process.env.PRIVATE_ACCESS_KEY ;
 
-        const options =  {
-                        issuer:'amit patil',
-                        expiresIn:'1h',
-                        audience:uid 
+        const options = {
+                            issuer:'amit patil',
+                            expiresIn:'1h',
+                            audience:uid 
                         }
         
         //genrate jwt token                 
@@ -35,18 +40,25 @@ module.exports =
     }
 ,
 //  genrate and store refresh token in redis
-    SignRefreshToken : async function(uid) {
+    SignRefreshToken : async function(data) {
         
+
+        const { _id ,email ,username } = data;
+        
+        const uid     =  _id.toString();
+        const mail    =  email;
+        const uname   =  username;
+
         return new Promise((resolve,reject)=>{
         
-        const payload =  { name:'amit patil' } ;
+        const payload = { username:uname ,email:mail  } ;
 
-        const key     =  process.env.PRIVATE_REFRESH_KEY ;
+        const key     = process.env.PRIVATE_REFRESH_KEY ;
 
-        const options =  {
-                        issuer:'amit patil',
-                        expiresIn:'1h',
-                        audience:uid 
+        const options = {
+                            issuer:'amit patil',
+                            expiresIn:'1y',
+                            audience:uid 
                         }
                         
 
@@ -98,8 +110,8 @@ module.exports =
 
     }
 ,
-// verify refresh token and send uid back 
-   VerifyRefreshToken : async function(token)
+//  verify refresh token and send uid back 
+    VerifyRefreshToken : async function(token)
    {
 
     return new Promise((resolve,reject)=>{
@@ -107,14 +119,16 @@ module.exports =
        const key =  process.env.PRIVATE_REFRESH_KEY ;
 
        jwt.verify(token,key,(err,payload)=>{
+          
            if(err)
            {
       
               return reject(new httpErrors.Unauthorized());
            }
          
-           const uid = payload.aud;
-          
+           const uid   =  payload.aud;
+           const data  =  payload;
+
            redisClient.get(uid,(errs,value)=>{
                
               if(errs)
@@ -127,7 +141,7 @@ module.exports =
                 return reject(new httpErrors.Unauthorized());
               } 
               
-              return resolve(uid);
+              return resolve(data);
 
 
            });
@@ -136,7 +150,7 @@ module.exports =
 
     });
 
-   }
+    }
 
 
 }
