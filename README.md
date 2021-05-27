@@ -15,15 +15,16 @@ I have developed a secured authentication and Authorization system using jwt . i
   - Login 
   - Logout
   - Reset Password
-
+  - Forgot Password 
 
 > User
 
 - Authentication with JWT 
   - Login 
-  - Register
+  - Register ( Email Otp )
   - Logout
   - Reset Password
+  - Forgot Password 
   - Delete Account
 
 
@@ -86,7 +87,14 @@ I have developed a secured authentication and Authorization system using jwt . i
     <td>16</td>
     <td> express-validator </td>
   </tr>
- 
+  <tr>
+    <td>17</td>
+    <td> nodemailer</td>
+  </tr>
+ <tr>
+    <td>18</td>
+    <td> in-memory-otp</td>
+  </tr>
  
 </table>
 
