@@ -4,6 +4,11 @@ Currently Working on this project
 # Highly Secured Authentication System With User Profile Page
 I have developed a secured authentication and Authorization system using jwt . in this system I had generated two tokens first one is an access token which has a short period of approximately 1 hour and another one is a refreshing token that has 1 year of the expiry date. basically, what I do here, on the time of user signup or login I generate this to tokens and send back to the client and then later on each request I send one additional header called authorization and in that header, I pass this access token so then I can verify the token and extract the userid from it.
 
+## API Documentation
+
+
+[Postman api documentation](https://documenter.postman.com/preview/11617094-8401f223-5e2d-4afb-8552-146ac1a0190e?environment=&versionTag=latest&apiName=CURRENT&version=latest&documentationLayout=classic-double-column&right-sidebar=303030&top-bar=FFFFFF&highlight=EF5B25
+)
 
 
 ## Features
