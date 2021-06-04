@@ -7,8 +7,7 @@ I have developed a secured authentication and Authorization system using jwt . i
 ## API Documentation
 
 
-[Postman api documentation](https://documenter.postman.com/preview/11617094-8401f223-5e2d-4afb-8552-146ac1a0190e?environment=&versionTag=latest&apiName=CURRENT&version=latest&documentationLayout=classic-double-column&right-sidebar=303030&top-bar=FFFFFF&highlight=EF5B25
-)
+[Postman api documentation](https://documenter.getpostman.com/view/11617094/TzY4fv9o)
 
 
 ## Features
