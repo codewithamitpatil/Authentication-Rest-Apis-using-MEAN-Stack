@@ -104,5 +104,9 @@ I have developed a secured authentication and Authorization system using jwt . i
 
 
 
+![Screenshot from 2021-06-06 23-16-42](https://user-images.githubusercontent.com/62344675/120934803-68bb0c80-c71d-11eb-8321-5fa4b7fa3af5.png)
 
-aaa
+<br>
+
+![Screenshot from 2021-06-06 23-16-55](https://user-images.githubusercontent.com/62344675/120934805-6b1d6680-c71d-11eb-9023-08881ef85c8b.png)
+
